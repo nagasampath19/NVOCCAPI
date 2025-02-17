@@ -3,8 +3,6 @@ package com.nvoccapi.nvoccapibackend.repository;
 import java.sql.Types;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlOutParameter;
@@ -18,8 +16,6 @@ import jakarta.annotation.PostConstruct;
 
 @Repository
 public class ShipperRepository {
-
-    private static final Logger logger = LoggerFactory.getLogger(ShipperRepository.class);
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -61,15 +57,12 @@ public class ShipperRepository {
                     shippingDetails.getShipperPinCode(),
                     shippingDetails.getShipperCIN()
             );
-            logger.info("Result map: {}", result);
             if (result.containsKey("v_bl_id")) {
                 return (int) result.get("v_bl_id");
             } else {
-                logger.error("bl_id not found in result map");
                 return -1; // Indicate an error
             }
         } catch (Exception e) {
-            logger.error("Error executing stored procedure: ", e);
             return -1; // Indicate an error
         }
     }

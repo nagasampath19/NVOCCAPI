@@ -44,6 +44,15 @@ public class ShipperDetailsDTO {
     @Size(max = 50, message = "CIN must be at most 50 characters")
     private String shipperCIN;
 
+    private int user_id;
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
     // Getters and Setters
     public String getShipperName() {
         return shipperName;

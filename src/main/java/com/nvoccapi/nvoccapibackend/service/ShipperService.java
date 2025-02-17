@@ -16,6 +16,7 @@ public class ShipperService {
     public int createShippingDetails(ShipperDetailsDTO shippingDetailsDTO) {
         ShipperDetails shippingDetails = new ShipperDetails();
         // Map fields from DTO to entity
+        shippingDetails.setUser_id(shippingDetailsDTO.getUser_id());
         shippingDetails.setShipperName(shippingDetailsDTO.getShipperName());
         shippingDetails.setShipperAddress1(shippingDetailsDTO.getShipperAddress1());
         shippingDetails.setShipperAddress2(shippingDetailsDTO.getShipperAddress2());

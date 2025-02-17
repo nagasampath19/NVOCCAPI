@@ -94,7 +94,7 @@ public class ShipperDetails {
     }
 
     public int getUser_id() {
-        return 1;
+        return user_id;
     }
 
     public void setUser_id(int user_id) {
