@@ -42,20 +42,20 @@ public class ShipperRepository {
                 );
     }
 
-    public int saveShippingDetails(ShipperDetails shippingDetails) {
+    public int saveShipperDetails(ShipperDetails ShipperDetails) {
         try {
             Map<String, Object> result = simpleJdbcCall.execute(
-                    shippingDetails.getUser_id(),
-                    shippingDetails.getShipperName(),
-                    shippingDetails.getShipperAddress1(),
-                    shippingDetails.getShipperAddress2(),
-                    shippingDetails.getShipperCity(),
-                    shippingDetails.getShipperState(),
-                    shippingDetails.getShipperCountry(),
-                    shippingDetails.getShipperEmail(),
-                    shippingDetails.getShipperPhone(),
-                    shippingDetails.getShipperPinCode(),
-                    shippingDetails.getShipperCIN()
+                    ShipperDetails.getUser_id(),
+                    ShipperDetails.getShipperName(),
+                    ShipperDetails.getShipperAddress1(),
+                    ShipperDetails.getShipperAddress2(),
+                    ShipperDetails.getShipperCity(),
+                    ShipperDetails.getShipperState(),
+                    ShipperDetails.getShipperCountry(),
+                    ShipperDetails.getShipperEmail(),
+                    ShipperDetails.getShipperPhone(),
+                    ShipperDetails.getShipperPinCode(),
+                    ShipperDetails.getShipperCIN()
             );
             if (result.containsKey("v_bl_id")) {
                 return (int) result.get("v_bl_id");

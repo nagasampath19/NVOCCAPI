@@ -6,19 +6,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nvoccapi.nvoccapibackend.dto.ShipperDetailsDTO;
-import com.nvoccapi.nvoccapibackend.service.ShipperService;
+import com.nvoccapi.nvoccapibackend.dto.ConsigneeDetailsDTO;
+import com.nvoccapi.nvoccapibackend.service.ConsigneeService;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/blapi/Shipper")
-public class ShipperController {
+@RequestMapping("/blapi/Consignee")
+public class ConsigneeController {
 
     @Autowired
-    private ShipperService ShipperService;
+    private ConsigneeService consigneeService;
+
+
+
     @PostMapping("/create")
-    public int createShipper(@Valid @RequestBody ShipperDetailsDTO shipperDetailsDTO) {
-        return ShipperService.createShipperDetails(shipperDetailsDTO);
+    public int createShipping(@Valid @RequestBody ConsigneeDetailsDTO consigneeDetailsDTO) {
+        return consigneeService.createConsigneeDetails(consigneeDetailsDTO);
     }
 }

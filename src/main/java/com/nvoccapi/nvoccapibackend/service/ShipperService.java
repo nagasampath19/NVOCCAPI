@@ -11,23 +11,23 @@ import com.nvoccapi.nvoccapibackend.repository.ShipperRepository;
 public class ShipperService {
 
     @Autowired
-    private ShipperRepository shippingRepository;
+    private ShipperRepository ShipperRepository;
 
-    public int createShippingDetails(ShipperDetailsDTO shippingDetailsDTO) {
-        ShipperDetails shippingDetails = new ShipperDetails();
+    public int createShipperDetails(ShipperDetailsDTO ShipperDetailsDTO) {
+        ShipperDetails ShipperDetails = new ShipperDetails();
         // Map fields from DTO to entity
-        shippingDetails.setUser_id(shippingDetailsDTO.getUser_id());
-        shippingDetails.setShipperName(shippingDetailsDTO.getShipperName());
-        shippingDetails.setShipperAddress1(shippingDetailsDTO.getShipperAddress1());
-        shippingDetails.setShipperAddress2(shippingDetailsDTO.getShipperAddress2());
-        shippingDetails.setShipperCity(shippingDetailsDTO.getShipperCity());
-        shippingDetails.setShipperState(shippingDetailsDTO.getShipperState());
-        shippingDetails.setShipperCountry(shippingDetailsDTO.getShipperCountry());
-        shippingDetails.setShipperEmail(shippingDetailsDTO.getShipperEmail());
-        shippingDetails.setShipperPhone(shippingDetailsDTO.getShipperPhone());
-        shippingDetails.setShipperPinCode(shippingDetailsDTO.getShipperPinCode());
-        shippingDetails.setShipperCIN(shippingDetailsDTO.getShipperCIN());
+        ShipperDetails.setUser_id(ShipperDetailsDTO.getUser_id());
+        ShipperDetails.setShipperName(ShipperDetailsDTO.getShipperName());
+        ShipperDetails.setShipperAddress1(ShipperDetailsDTO.getShipperAddress1());
+        ShipperDetails.setShipperAddress2(ShipperDetailsDTO.getShipperAddress2());
+        ShipperDetails.setShipperCity(ShipperDetailsDTO.getShipperCity());
+        ShipperDetails.setShipperState(ShipperDetailsDTO.getShipperState());
+        ShipperDetails.setShipperCountry(ShipperDetailsDTO.getShipperCountry());
+        ShipperDetails.setShipperEmail(ShipperDetailsDTO.getShipperEmail());
+        ShipperDetails.setShipperPhone(ShipperDetailsDTO.getShipperPhone());
+        ShipperDetails.setShipperPinCode(ShipperDetailsDTO.getShipperPinCode());
+        ShipperDetails.setShipperCIN(ShipperDetailsDTO.getShipperCIN());
 
-        return shippingRepository.saveShippingDetails(shippingDetails);
+        return ShipperRepository.saveShipperDetails(ShipperDetails);
     }
 }
