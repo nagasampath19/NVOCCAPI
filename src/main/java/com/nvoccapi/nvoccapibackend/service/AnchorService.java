@@ -9,6 +9,7 @@ import com.nvoccapi.nvoccapibackend.dto.PortDetailsDTO;
 import com.nvoccapi.nvoccapibackend.dto.PortDetailsSearchDTO;
 import com.nvoccapi.nvoccapibackend.model.PortDetails;
 import com.nvoccapi.nvoccapibackend.repository.AnchorDataRepository;
+import com.nvoccapi.nvoccapibackend.repository.VesselRepository;
 
 
 @Service
@@ -16,6 +17,9 @@ public class AnchorService {
 
     @Autowired
     private AnchorDataRepository anchorDataRepository;
+
+    @Autowired
+    private VesselRepository vesselRepository;
 
     public int savePortDetails(PortDetailsDTO portDetailsDTO) {
         PortDetails portDetails = new PortDetails();
@@ -50,4 +54,7 @@ public class AnchorService {
         return anchorDataRepository.getPortDetailsById(portId);
     }
 
+    public int getVesselDetailsCount() {
+        return vesselRepository.getVesselDetailsCount();
+    }
 }
