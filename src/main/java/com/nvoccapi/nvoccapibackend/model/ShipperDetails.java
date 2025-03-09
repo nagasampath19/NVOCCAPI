@@ -2,6 +2,7 @@ package com.nvoccapi.nvoccapibackend.model;
 
 public class ShipperDetails {
     private int user_id;
+    private int shipperid;
     private String shipperName;
     private String shipperAddress1;
     private String shipperAddress2;
@@ -12,7 +13,8 @@ public class ShipperDetails {
     private String shipperPhone;
     private String shipperPinCode;
     private String shipperCIN;
-
+    private String shipper_fulladdress;
+    
     public String getShipperName() {
         return shipperName;
     }
@@ -99,5 +101,21 @@ public class ShipperDetails {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public int getShipperid() {
+        return shipperid;
+    }
+
+    public void setShipperid(int shipperid) {
+        this.shipperid = shipperid;
+    }
+
+    public String getShipper_fulladdress() {
+        return shipper_fulladdress;
+    }
+
+    public void setShipper_fulladdress(String shipper_fulladdress) {
+        this.shipper_fulladdress = shipper_fulladdress;
     }
 }

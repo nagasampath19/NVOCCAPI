@@ -1,8 +1,8 @@
 package com.nvoccapi.nvoccapibackend.model;
 
 public class ConsigneeDetails {
+    private int consignee_Id;
     private int user_id;
-    private int bl_id;
     private String ConsigneeName;
     private String ConsigneeAddress1;
     private String ConsigneeAddress2;
@@ -12,9 +12,11 @@ public class ConsigneeDetails {
     private String ConsigneeEmail;
     private String ConsigneePhone;
     private String ConsigneePinCode;
-    private String ConsigneeRegNo;
-    private String ConsigneeTinNo;
-    
+    private String ConsigneeGSTIN;
+    private String ConsigneePAN;
+    private String ConsigneeIEC;
+    private String Consignee_fulladdress;
+
     public String getConsigneeName() {
         return ConsigneeName;
     }
@@ -87,22 +89,6 @@ public class ConsigneeDetails {
         this.ConsigneePinCode = ConsigneePinCode;
     }
 
-    public String getConsigneeRegNo() {
-        return ConsigneeRegNo;
-    }
-
-    public void setConsigneeRegNo(String ConsigneeRegNo) {
-        this.ConsigneeRegNo = ConsigneeRegNo;
-    }
-
-    public String getConsigneeTINNo() {
-        return ConsigneeTinNo;
-    }
-
-    public void setConsigneeTINNo(String ConsigneeTinNo) {
-        this.ConsigneeTinNo = ConsigneeTinNo;
-    }
-
     public int getUser_id() {
         return user_id;
     }
@@ -111,12 +97,44 @@ public class ConsigneeDetails {
         this.user_id = user_id;
     }
 
-    public int getBL_ID() {
-        return bl_id;
+    public int getConsignee_Id() {
+        return consignee_Id;
     }
 
-    public void setBL_ID(int bl_id) {
-        this.bl_id = bl_id;
+    public void setConsignee_Id(int consignee_Id) {
+        this.consignee_Id = consignee_Id;
+    }
+
+    public String getConsignee_fulladdress() {
+        return Consignee_fulladdress;
+    }
+
+    public void setConsignee_fulladdress(String Consignee_fulladdress) {
+        this.Consignee_fulladdress = Consignee_fulladdress;
+    }
+
+    public String getConsigneeGSTIN() {
+        return ConsigneeGSTIN;
+    }
+
+    public void setConsigneeGSTIN(String ConsigneeGSTIN) {
+        this.ConsigneeGSTIN = ConsigneeGSTIN;
+    }
+
+    public String getConsigneePAN() {
+        return ConsigneePAN;
+    }
+
+    public void setConsigneePAN(String ConsigneePAN) {
+        this.ConsigneePAN = ConsigneePAN;
+    }
+
+    public String getConsigneeIEC() {
+        return ConsigneeIEC;
+    }
+
+    public void setConsigneeIEC(String ConsigneeIEC) {
+        this.ConsigneeIEC = ConsigneeIEC;
     }
 
 }

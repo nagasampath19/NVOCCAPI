@@ -6,7 +6,6 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class NotifyDetailsDTO {
-    private Long bl_id;
     private int user_id;
     private Long notify_id;
     
@@ -58,14 +57,6 @@ public class NotifyDetailsDTO {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public Long getBl_id() {
-        return bl_id;
-    }
-
-    public void setBl_id(Long bl_id) {
-        this.bl_id = bl_id;
     }
 
     public int getUser_id() {

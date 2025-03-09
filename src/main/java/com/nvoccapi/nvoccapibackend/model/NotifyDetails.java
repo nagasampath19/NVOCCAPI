@@ -3,7 +3,6 @@ package com.nvoccapi.nvoccapibackend.model;
 public class NotifyDetails {
     private Long notify_id;
     private int user_id;
-    private Long bl_id;
     private String notify_name;
     private String notify_address;
     private String notify_email;
@@ -15,14 +14,6 @@ public class NotifyDetails {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
-    }
-
-    public Long getBl_id() {
-        return bl_id;
-    }
-
-    public void setBl_id(Long bl_id) {
-        this.bl_id = bl_id;
     }
 
     public Long getNotify_id() {

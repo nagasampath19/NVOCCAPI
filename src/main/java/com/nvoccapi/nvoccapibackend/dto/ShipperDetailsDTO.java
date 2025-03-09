@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Size;
 
 public class ShipperDetailsDTO {
 
+    private Integer shipperid;
     @NotEmpty(message = "Shipper name is required")
     @Size(max = 100, message = "Shipper name must be at most 100 characters")
     private String shipperName;
@@ -133,5 +134,14 @@ public class ShipperDetailsDTO {
     public void setShipperCIN(String shipperCIN) {
         this.shipperCIN = shipperCIN;
     }
+
+    public Integer getShipperid() {
+        return shipperid;
+    }
+
+    public void setShipperid(Integer shipperid) {
+        this.shipperid = shipperid;
+    }
+ 
     
 }

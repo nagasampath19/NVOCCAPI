@@ -41,13 +41,16 @@ public class ConsigneeDetailsDTO {
     @Size(min = 5, max = 10, message = "Pin code should be between 5 and 10 characters")
     private String ConsigneePinCode;
 
-    @Size(max = 50, message = "Registration Number must be at most 50 characters")
-    private String ConsigneeRegNo;
+    @Size(max = 50, message = "GSTIN Number must be at most 50 characters")
+    private String ConsigneeGSTIN;
 
-    @Size(max = 50, message = "TIN Number must be at most 50 characters")
-    private String ConsigneeTiNNO;
+    @Size(max = 50, message = "PAN Number must be at most 50 characters")
+    private String ConsigneePAN;
+
+    @Size(max = 50, message = "IEC Code must be at most 50 characters")
+    private String ConsigneeIEC;
    
-    private int bl_id;
+    private int consignee_Id;
     private int user_id;
     // Getters and Setters
     public String getConsigneeName() {
@@ -122,22 +125,6 @@ public class ConsigneeDetailsDTO {
         this.ConsigneePinCode = ConsigneePinCode;
     }
 
-    public String getConsigneeRegNo() {
-        return ConsigneeRegNo;
-    }
-
-    public void setConsigneeRegNo(String ConsigneeRegNo) {
-        this.ConsigneeRegNo = ConsigneeRegNo;
-    }
-
-    public int getBl_id() {
-        return bl_id;
-    }
-
-    public void setBl_id(int bl_id) {
-        this.bl_id = bl_id;
-    }
-
     public int getUser_id() {
         return user_id;
     }
@@ -146,12 +133,36 @@ public class ConsigneeDetailsDTO {
         this.user_id = user_id;
     }
 
-    public String getConsigneeTiNNO() {
-        return ConsigneeTiNNO;
+    public String getConsigneeGSTIN() {
+        return ConsigneeGSTIN;
     }
 
-    public void setConsigneeTiNNO(String ConsigneeTiNNO) {
-        this.ConsigneeTiNNO = ConsigneeTiNNO;
+    public void setConsigneeGSTIN(String ConsigneeGSTIN) {
+        this.ConsigneeGSTIN = ConsigneeGSTIN;
+    }
+
+    public String getConsigneePAN() {
+        return ConsigneePAN;
+    }
+
+    public void setConsigneePAN(String ConsigneePAN) {
+        this.ConsigneePAN = ConsigneePAN;
+    }
+
+    public String getConsigneeIEC() {
+        return ConsigneeIEC;
+    }
+
+    public void setConsigneeIEC(String ConsigneeIEC) {
+        this.ConsigneeIEC = ConsigneeIEC;
+    }
+
+    public int getConsignee_Id() {
+        return consignee_Id;
+    }
+
+    public void setConsignee_Id(int consignee_Id) {
+        this.consignee_Id = consignee_Id;
     }
     
 }

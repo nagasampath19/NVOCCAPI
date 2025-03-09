@@ -1,9 +1,12 @@
 package com.nvoccapi.nvoccapibackend.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nvoccapi.nvoccapibackend.dto.ShipperDetailsDTO;
+import com.nvoccapi.nvoccapibackend.dto.ShipperDetailsSearchDTO;
 import com.nvoccapi.nvoccapibackend.model.ShipperDetails;
 import com.nvoccapi.nvoccapibackend.repository.ShipperRepository;
 
@@ -15,7 +18,7 @@ public class ShipperService {
 
     public int createShipperDetails(ShipperDetailsDTO ShipperDetailsDTO) {
         ShipperDetails ShipperDetails = new ShipperDetails();
-        // Map fields from DTO to entity
+        ShipperDetails.setShipperid(ShipperDetailsDTO.getShipperid());
         ShipperDetails.setUser_id(ShipperDetailsDTO.getUser_id());
         ShipperDetails.setShipperName(ShipperDetailsDTO.getShipperName());
         ShipperDetails.setShipperAddress1(ShipperDetailsDTO.getShipperAddress1());
@@ -29,5 +32,20 @@ public class ShipperService {
         ShipperDetails.setShipperCIN(ShipperDetailsDTO.getShipperCIN());
 
         return ShipperRepository.saveShipperDetails(ShipperDetails);
+    }
+    public void deactivateShipperDetails(int shipper_Id) {
+        ShipperRepository.deactivateShipperDetails(shipper_Id); 
+    }
+
+    public List<ShipperDetails> searchShipperDetails(ShipperDetailsSearchDTO searchDTO) {
+        return ShipperRepository.searchShipperDetails(searchDTO);
+    }
+
+    public int getShipperDetailsCount() {
+        return ShipperRepository.getShipperDetailsCount();
+    }
+
+    public ShipperDetails getShipperDetailsById(int shipper_Id) {
+        return ShipperRepository.getShipperDetailsById(shipper_Id);
     }
 }
