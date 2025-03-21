@@ -2,16 +2,16 @@ package com.nvoccapi.nvoccapibackend.model;
 
 public class PackageDetails {
 
-    private int packageId;
+    private Integer packageId;
     private String packageCode;
     private String description;
 
     // Getters and Setters
-    public int getPackageId() {
+    public Integer getPackageId() {
         return packageId;
     }
 
-    public void setPackageId(int packageId) {
+    public void setPackageId(Integer packageId) {
         this.packageId = packageId;
     }
 

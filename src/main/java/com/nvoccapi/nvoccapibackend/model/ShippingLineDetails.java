@@ -1,31 +1,21 @@
 package com.nvoccapi.nvoccapibackend.model;
 
 public class ShippingLineDetails {
-    private int shippingLineId;
-    private int userId; // Added user_id field
+    private Integer shippingLineId;
     private String shippingLineCode;
     private String shippingLineName;
     private String addressLine1;
-    private String addressLine2;
     private String agentCode;
     private String lineCode;
     private String shippingLineType;
 
     // Getters and Setters
-    public int getShippingLineId() {
+    public Integer getShippingLineId() {
         return shippingLineId;
     }
 
-    public void setShippingLineId(int shippingLineId) {
+    public void setShippingLineId(Integer shippingLineId) {
         this.shippingLineId = shippingLineId;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public String getShippingLineCode() {
@@ -52,28 +42,12 @@ public class ShippingLineDetails {
         this.addressLine1 = addressLine1;
     }
 
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
-    }
-
-    public String getAgentCode() {
+   public String getAgentCode() {
         return agentCode;
     }
 
     public void setAgentCode(String agentCode) {
         this.agentCode = agentCode;
-    }
-
-    public String getLineCode() {
-        return lineCode;
-    }
-
-    public void setLineCode(String lineCode) {
-        this.lineCode = lineCode;
     }
 
     public String getShippingLineType() {
@@ -82,5 +56,13 @@ public class ShippingLineDetails {
 
     public void setShippingLineType(String shippingLineType) {
         this.shippingLineType = shippingLineType;
+    }
+
+    public String getLineCode() {
+        return lineCode;
+    }
+
+    public void setLineCode(String lineCode) {
+        this.lineCode = lineCode;
     }
 }
